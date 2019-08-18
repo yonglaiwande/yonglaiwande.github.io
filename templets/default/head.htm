@@ -1,0 +1,12 @@
+<div class="header">
+  <a href="/"><img class="logo1" src="/style/lyd-images/logo.jpg" title=""></a>
+  <img class="navBtn" src="/style/lyd-images/navBtn.png" title="点我!点我!"/>
+  <div class="container">
+    <ul class="nav">
+      <a href="/"><li {dede:field name=typeid runphp="yes"}(@me=="")? @me=" class='on'":@me="";{/dede:field}>首页</li></a>
+      {dede:channel type='top' currentstyle="<a href='~typelink~'><li class='on'>~typename~</li></a></li>"}
+      <a href="[field:typeurl/]"><li>[field:typename/]</li></a>
+      {/dede:channel}
+    </ul>
+  </div>
+</div>

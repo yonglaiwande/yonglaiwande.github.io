@@ -1,0 +1,354 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no"/>
+<meta name="baidu-site-verification" content="gEbh1hz6Uk" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="author" content="order by leeklu.com"/>
+<link rel="stylesheet" type="text/css" href="/style/lydcss/font.css"/>
+<link rel="stylesheet" type="text/css" href="/style/lydcss/base.css"/>
+<link rel="stylesheet" type="text/css" href="/style/lydcss/index.css"/>
+<script src="/style/js/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<link rel="stylesheet" type="text/css" href="/style/lydcss/indexAnimate.css"/>
+<!--幻灯片 -->
+<div class="banner">
+  <div class="contents">
+    <a href="#"> <div class="content">   
+    <img class="bannerBg" src="/style/lyd-images/banner1.jpg"/>
+    </div>
+    
+    </a> 
+    
+    <a href="#"> <div class="content">  
+      <img class="bannerBg" src="/style/lyd-images/banner2.jpg"/>    
+    </div>
+    </a>
+   
+    <div class="content"> 
+     <img class="bannerBg" src="/style/lyd-images/banner3.jpg"/>
+    </div>
+    
+    </div>
+  <div class="bannerNav"></div>
+  <img class="bannerBtn leftBtn" onClick="bannerBtnClick('-')" src="/style/lyd-images/bannerLeft.png"/><img class="bannerBtn rightBtn" onClick="bannerBtnClick('+')" src="/style/lyd-images/bannerRight.png"/></div>
+<!--主营产品 -->
+ <div class="customer">
+  <div class="container">
+    <p class="mainTitle">主营类目</p>
+    <div class="mainSub"></div>
+    <div class="contents">
+      <div class="contentss">
+        <div class="content"> 
+       {dede:type typeid='3'}    
+       <a href="[field:typelink /]" title="[field:typename /]"> 
+       <img src="/style/lyd-images/guijiao.jpg" alt="[field:typename /]"/>      
+        <h4>硅橡胶产品</h4>
+        <p>硅橡胶在极端的环境与温度时表现很好，通常用于汽车业、航空业、家用电器行业、电子行业、医疗行业及厨具行业等...</p>
+        </a>      
+       {/dede:type}
+        
+       {dede:type typeid='4'}    
+       <a href="[field:typelink /]" title="[field:typename /]"> 
+       <img src="/style/lyd-images/shuangmianjiao.jpg" alt="[field:typename /]"/>      
+        <h4>双面胶产品</h4>
+        <p>双面胶带是以纸、布、塑料薄膜为基材，再把弹性体型压敏胶或树脂型压敏胶均匀涂布在上述基材上制成的卷状胶粘带，是由基材、胶粘剂、隔离纸（膜）三部分组成...</p>
+        </a>      
+       {/dede:type}  
+        
+           {dede:type typeid='5'}    
+       <a href="[field:typelink /]" title="[field:typename /]"> 
+       <img src="/style/lyd-images/fangchenwang.jpg" alt="[field:typename /]"/>      
+        <h4>防尘网产品</h4>
+        <p>防尘网广泛应用于手机、对讲机、移动电脑、移动媒体播放器、蓝牙耳机、助听器、收音机等户外防水系列电子产品...</p>
+        </a>      
+       {/dede:type}
+        
+          {dede:type typeid='6'}    
+       <a href="[field:typelink /]" title="[field:typename /]"> 
+       <img src="/style/lyd-images/daodian.jpg" alt="[field:typename /]"/>      
+        <h4>[field:typename /]</h4>
+        <p>导电布具有等同金属的优良导电性能，同时有良好的韧性和可缠绕性能，背导电胶后是各种电子电器和通信设备屏蔽的理想材料，同时对线路板或各种表面的屏蔽和接地也非常适合...</p>
+        </a>      
+       {/dede:type}
+          
+          
+       {dede:type typeid='14'}    
+       <a href="[field:typelink /]" title="[field:typename /]"> 
+       <img src="/style/lyd-images/jueyuan.jpg" alt="[field:typename /]"/>      
+        <h4>[field:typename /]</h4>
+        <p>聚酰亚胺薄膜具有优良的电气绝缘性能，符合UL标准（多数达到94V-0防火等级），具有高耐电压性，可以100摄氏度以上的高温环境中长期工作...
+        </p>
+        </a>      
+       {/dede:type}
+
+   
+        </div>
+      </div>
+    </div>
+    <img class="customerBtn leftBtn" onClick="customerBtnClick('+')" src="/style/lyd-images/customerLeft.png"/>
+    <img class="customerBtn rightBtn" onClick="customerBtnClick('-')" src="/style/lyd-images/customerRight.png"/>
+    </div>
+</div> 
+
+<!--模切产品 -->
+<div class="work">
+ <div class="container">
+  <p class="mainTitle">模切产品展示</p>
+ <div class="mainSub"></div>
+  <div class="content"> 
+     <div class="nav-tabs">
+      <ul>    
+    <li> {dede:type typeid='3'}
+     <a href="[field:typelink /]" title="[field:typename /]">
+       [field:typename /]
+     </a> 
+     {/dede:type}
+     </li>
+     
+     <li> {dede:type typeid='4'}
+     <a href="[field:typelink /]" title="[field:typename /]">
+       [field:typename /]
+     </a> 
+     {/dede:type}
+     </li>
+     
+     <li> {dede:type typeid='5'}
+     <a href="[field:typelink /]" title="[field:typename /]">
+       [field:typename /]
+     </a> 
+     {/dede:type}
+     </li>
+         <li> {dede:type typeid='6'}
+     <a href="[field:typelink /]" title="[field:typename /]">
+       [field:typename /]
+     </a> 
+     {/dede:type}
+     </li>
+         <li> {dede:type typeid='14'}
+     <a href="[field:typelink /]" title="[field:typename /]">
+       [field:typename /]
+     </a> 
+     {/dede:type}
+     </li>
+         <li> {dede:type typeid='15'}
+     <a href="[field:typelink /]" title="[field:typename /]">
+       [field:typename /]
+     </a> 
+     {/dede:type}
+     </li>
+     
+     </ul>
+    </div>
+     <div class="pro_list">
+    {dede:arclist row='8' titlelen='36' typeid='3,4,5,6,14,15'}
+    <a href="[field:arcurl/]">
+     <div class="child">
+     <img class="childImg" src="[field:litpic/]"/>
+     <h4>[field:title/]</h4>
+      <div class="childHide">
+      <div class="childTag">
+      <p>[field:typename/]</p>
+        <div class="childSub"></div>
+      </div>
+      <div class="childContent">
+        <p class="title">[field:title/]</p>
+        <p class="info">[field:description function='cn_substr(@me,50)'/]...</p>
+      </div>
+      <img class="childPointer" src="/style/images/hidePointer.png">
+      </div>
+    </div>
+    </a> 
+    {/dede:arclist}
+    </div> 
+  </div>
+</div>  
+</div> 
+
+<!--关于禄亿德 -->
+<div class="about">
+  <div class="container">
+    <p class="mainTitle">关于禄亿德</p>
+    <div class="mainSub"></div>
+    <div class="content">
+      <div class="info">
+      <ul>
+      <li class="info_tupian">
+        
+        <div class="tupianCon">
+        
+              <img src="{dede:global.cfg_templets_skin/}/images/qiyejianjie.jpg">
+        
+        </div>
+
+      
+      </li>
+      <li class="info_jianjie">东莞禄亿德科技有限公司位于东莞寮步镇西溪工业区，占地6000平米，交通便利，公司是专业从事模切及包装材料相关产品方案的服务商，广泛涉足智能产品配件、汽车零组件、移动电话、医药产品及新能源新材料开发应用的高新科技企业。
+      
+     禄亿德科技有限公司凭借前瞻决策、扎根科技和专业制造，自2013年建立振隆机械和泰同实业以来，企业迅速扩张，拥有优质客户数量激增，同时对我们自身的发展和实力提出了更高的要求和解决方案，禄亿德秉承立德敬业 诚信笃行的企业精神在2019年盛大启航，致力服务国内外更多的客户，把每一份客户的信任都用我们的专业转变成优质的回报，让我们与客户的合作更加愉快，期待我们的明天更加辉煌............
+        <p>
+       {dede:type typeid='1'}
+           <a href="[field:typelink /]">
+      <div class="XqBtn"><span>查看详情>></span></div>
+      </a>
+      {/dede:type}   
+     </p> 
+     </li>     
+      </ul>                 
+      </div>   
+     </div>
+         
+  </div>
+</div>
+
+<!--公司设备展示 -->
+<div class="CompanyShow" style="background-color:#f1f0ee;">
+    <p class="mainTitle">公司形象展示</p>
+    <div class="mainSub"></div>
+    
+<div id="certify">
+<div class="swiper-container">
+<!--图片大小设计成520*408 -->
+<div class="swiper-wrapper">
+     {dede:arclist typeid='16' row='10' type='image.' imgwidth='520' imgheight='408' orderby='sortrank'}
+    
+     <div class="swiper-slide [field:global name=autoindex runphp='yes'](@me>1)? @me='sk_hide':@me='';[/field:global]" id="goods_[field:global name=autoindex runphp='yes']@me=@me;[/field:global]">
+      <img src="[field:litpic/]" alt="[field:title function='html2text(@me)'/]" />   
+      </div> 
+   {/dede:arclist}
+</div>
+</div>
+<div class="swiper-pagination"></div>
+<div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div>
+</div>
+</div>
+<!--新闻资讯 -->
+<div class="news">
+<div class="info-cut">
+  <div class="container">
+    <div class="title-box">
+      <h2>新闻资讯</h2>
+    </div>
+    <div class="mainSub"></div>
+    <div class="row">
+      <div class="info-box">
+        <ul class="info-wraper">
+          <li class="info-slide">
+           {dede:type typeid='10'}
+           <span><h3>[field:typename /]</h3>
+            <a href="[field:typelink /]" title="查看更多">
+            <hr>
+            <hr>
+            <hr>
+            </a> </span>
+            {/dede:type}
+            <ol>
+              {dede:arclist row='3' titlelen='50' typeid='10'}
+              <li>
+                <h4><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h4>
+                <p>[field:description function='cn_substr(@me,250)'/]..</p>
+              </li>
+              {/dede:arclist}
+            </ol>
+          </li>
+          
+          <li class="info-slide">
+           {dede:type typeid='9'}
+           <span>
+            <h3>[field:typename /]</h3>
+            <a href="[field:arcurl/]" title="查看更多">
+            <hr>
+            <hr>
+            <hr>
+            </a> </span>
+            {/dede:type}
+            
+            <ol>
+              {dede:arclist row='3' titlelen='50' typeid='9'}
+              <li>
+                <h4><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h4>
+                <p>[field:description function='cn_substr(@me,250)'/]..</p>
+              </li>
+              {/dede:arclist}
+            </ol>
+          </li>
+          
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="liucheng_link">
+<div class="bg-box"><img src="/style/lyd-images/sclc.png"></div>
+</div>
+<div class="met-links">
+  <div class="container">
+    <ol class="breadcrumb">
+      <li>友情链接 :</li>
+      {dede:flink row='50'/}
+    </ol>
+  </div>
+</div>
+{dede:include filename="foot.htm"/}
+<script src="/style/js/index.js"></script> 
+<script language="javascript" type="text/javascript" src="/style/js/swiper.min.js"></script>
+<script>
+certifySwiper = new Swiper('#certify .swiper-container', {
+	watchSlidesProgress: true,
+	slidesPerView: 'auto',
+	centeredSlides: true,
+	loop: true,
+	loopedSlides: 5,
+	autoplay: true,
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	pagination: {
+		el: '.swiper-pagination',
+		//clickable :true,
+	},
+	on: {
+		progress: function(progress) {
+			for (i = 0; i < this.slides.length; i++) {
+				var slide = this.slides.eq(i);
+				var slideProgress = this.slides[i].progress;
+				modify = 1;
+				if (Math.abs(slideProgress) > 1) {
+					modify = (Math.abs(slideProgress) - 1) * 0.3 + 1;
+				}
+				translate = slideProgress * modify * 260 + 'px';
+				scale = 1 - Math.abs(slideProgress) / 5;
+				zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
+				slide.transform('translateX(' + translate + ') scale(' + scale + ')');
+				slide.css('zIndex', zIndex);
+				slide.css('opacity', 1);
+				if (Math.abs(slideProgress) > 3) {
+					slide.css('opacity', 0);
+				}
+			}
+		},
+		setTransition: function(transition) {
+			for (var i = 0; i < this.slides.length; i++) {
+				var slide = this.slides.eq(i)
+				slide.transition(transition);
+			}
+
+		}
+	}
+
+})
+</script>
+</body>
+</html>

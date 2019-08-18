@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no"/>
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link rel="stylesheet" type="text/css" href="/style/lydcss/font.css"/>
+<link rel="stylesheet" type="text/css" href="/style/lydcss/base.css"/>
+<link rel="stylesheet" type="text/css" href="/style/lydcss/liuyan.css"/>
+<script src="/style/js/jquery-1.11.0.min.js"></script>
+<!--[if lt IE 9]>
+<script src="/style/js/html5shiv.min.js"></script>
+<script src="/style/js/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div class="banner">
+  <img class="bannerBg" src="/style/lyd-images/liuyan.jpg"/>
+</div>
+
+ <!-- 在线留言部分 --> 
+ <div class="lyd-order-form"> 
+  <h3 class="lyd-title tit-md">在线留言<span></span><em></em></h3>  
+  <div class="lyd-order-form-con"> 
+   {dede:loop table='dede_guestbook' sort='dtime' row='10' titlelen='30' typeid='50' if='ischeck=1'}
+<a href="[field:phpurl/]/plus/guestbook.php">
+[field:uname /]<img src="[field:phpurl/]/plus/guestbook/images/[field:face /].gif" alt="" />
+[field:msg function="cn_substr('@me',30)"/]
+[field:ip /]</a>
+{/dede:loop}           
+<form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+<input type="hidden" name="required" value="姓名,手机号码,电子邮件" />
+<input type="hidden" name="action" value="post" />
+<input type="hidden" name="diyid" value="1" />
+<input type="hidden" name="do" value="2" />
+
+    <ul class="findrow"> 
+ <li> <label><b>*</b><span class="row-hd">姓名：</span></label>
+ <input class='inputs' id='姓名' maxlength="20" name='姓名' placeholder="请填写您的姓名，以便于我方给您回复" type='text'>
+ </li> 
+      
+      
+           
+  <li> <label><b>*</b><span class="row-hd">手机号码：</span></label>
+      
+      <input class="inputs" maxlength="25" name='手机号码' id='手机号码' placeholder="请填写您的手机号码，填写后我司将第一时间与您通过电话取得联系" type='text'> 
+         
+      </li>    
+      
+      
+      
+       
+
+ <li> <label><b>*</b><span class="row-hd">电子邮件：</span></label>
+ <input class='inputs' maxlength="50" name='电子邮件' id='电子邮件'  placeholder="请填写您的电子邮件，填写后我司将通过电子邮件给您回复"'text'>
+ </li> 
+ 
+ 
+ 
+        
+      <li class="lyd-liuyan-form"> <label><span class="row-hd">留言内容：</span></label> 
+      <textarea maxlength="300" name='留言内容' id='留言内容' placeholder="请真实详尽填写留言内容"></textarea>
+      </li> 
+      
+   <input type="hidden" name="dede_fields" value="姓名,text;手机号码,text;电子邮件,text;留言内容,multitext" />
+<input type="hidden" name="dede_fieldshash" value="3ad7217072305c00e65630300a9502ed" />
+      
+  <li class="code_lyd">
+     <label><span>验证码：</span></label>
+     
+     <input name="validate" type="text" id="vdcode2" class="ipt-txt" style="width:100px;text-transform: uppercase;" />
+     <b>
+
+<img id="vdimgck" align="absmiddle" onClick="this.src=this.src+'?'" style="cursor: pointer;" alt="看不清？点击更换" src="../include/vdimgck.php"/>
+
+<a href="javascript:vide(-1);" onClick="changeAuthCode();">看不清？ </a>
+     
+     </b>
+     
+     </li> 
+
+     <li class="lyd-liuyan-btn">
+      <input maxlength="1000" type="submit" name="submit" value="提 交" class="button_bg" />
+               
+<li>
+</ul> 
+</form> 
+
+  </div> 
+ </div> 
+  
+{dede:include filename="foot.htm"/}
+
+<script type="text/javascript" language="javascript">
+
+//验证码
+
+function changeAuthCode() {  
+
+var num = new Date().getTime();
+
+var rand = Math.round(Math.random() * 10000); 
+
+num = num + rand; 
+
+$('#ver_code').css('visibility','visible'); 
+
+if ($("#vdimgck")[0]) { 
+
+   $("#vdimgck")[0].src = "../include/vdimgck.php?tag=" + num; 
+
+} 
+
+return false;
+
+}
+
+</script>
+</body>
+</html>

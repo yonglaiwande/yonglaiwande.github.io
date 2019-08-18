@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no"/>
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link rel="stylesheet" type="text/css" href="/style/lydcss/font.css"/>
+<link rel="stylesheet" type="text/css" href="/style/lydcss/base.css"/>
+<link rel="stylesheet" type="text/css" href="/style/lydcss/rewind.css"/>
+<script src="/style/js/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div class="banner">
+  <img class="bannerBg" src="/style/lyd-images/aboutbg.jpg"/>
+  
+  </div>
+  
+<div class="main">
+  <div class="mainChild" id="mainChild1">
+    <div class="container">
+      <div class="sub"></div>
+      <p class="mainChildTitle">东莞禄亿德科技有限公司</p>
+      <div class="content">
+        <p class="info">
+        {dede:field.content/}       
+        </p>
+        <div class="contentMun">
+          <div class="child">
+            <p class="mun"><span>1000</span>+</p>
+            <p>超过1000次服务经验</p>
+          </div>
+          <div class="child">
+            <p class="mun"><span>10</span>+</p>
+            <p>10年专业历程</p>
+          </div>
+          <div class="child">
+            <p class="mun">100<span>+</span></p>
+            <p>超过100家客户选择禄亿德</p>
+          </div>
+        </div>
+      </div>
+      <div class="sub"></div>
+
+    </div>
+  </div>
+
+  
+</div>
+
+<!-- main over --> 
+{dede:include filename="foot.htm"/}
+<script src="/style/js/rewind.js"></script> 
+</body>
+</html>
